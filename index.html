@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Fitness Website">
     <meta name="author" content="Yash Munurreddy">
+    <link rel="icon" type="images/logo-icon" href="./img/weight-dumbbell.svg">
     <title>FitZone</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
@@ -206,7 +207,7 @@
             <div class="slides flex flex-col text-center p-7 gap-y-5 ">
               <i class="fa fa-quote-left text-4xl text-gray-500"></i>
               <div class="text-white font-sans">
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quidem illum perspiciatis adipisci nemo voluptas, molestias cum tenetur deleniti ipsum itaque minima eius, recusandae velit iste voluptatem, aliquam impedit vel? "
+                " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus perferendis modi qui hic sit dolore voluptatem accusamus pariatur quas recusandae! Eaque id ut nobis facilis itaque accusantium, sequi culpa laboriosam? "
               </div>
               <div class="text-[#ff3300] font-bold">
                 Darren Smith
@@ -215,7 +216,7 @@
             <div class="slides hidden flex flex-col p-7 gap-y-5 text-center">
               <i class="fa fa-quote-left text-4xl text-gray-500"></i>
               <div class="text-white font-sans">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam minima, fugiat tenetur, id distinctio iusto animi vitae a repellendus ad beatae dolorum aliquam dolores fuga ipsa non sunt architecto veritatis. "
+                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum, modi sunt autem rerum repellat quos quasi sed tempora recusandae deserunt molestiae. Iusto, quibusdam impedit sint optio incidunt tenetur ab? "
               </div>
               <div class="text-[#ff3300] font-bold">
                 Aleah Hood
@@ -224,15 +225,15 @@
             <div class="slides hidden flex flex-col p-7 gap-y-5 text-center">
               <i class="fa fa-quote-left text-4xl text-gray-500"></i>
               <div class="text-white font-sans">
-                " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae officiis eos odit libero est ad ab fuga commodi facere rem a ipsa aspernatur repellat aliquid, eveniet id dolor sed magni. "
+                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit perspiciatis, eveniet possimus officia ea labore nemo, magnam vitae dolores, laborum recusandae quisquam aliquam rerum voluptas repudiandae neque facilis id error. "
               </div>
               <div class="text-[#ff3300] font-bold">
                 Harley Bean
               </div>
             </div>
             <!--Previous and Next button-->
-          <a class="prev absolute top-36 cursor-pointer hover:bg-[#ff3300] p-2" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next absolute top-36 right-0 cursor-pointer hover:bg-[#ff3300] p-2" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev absolute top-36 cursor-pointer text-white hover:bg-[#ff3300] p-2" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next absolute top-36 right-0 cursor-pointer text-white hover:bg-[#ff3300] p-2" onclick="plusSlides(1)">&#10095;</a>
           </div>
         </section>
 
@@ -242,35 +243,80 @@
           </div>
           
           <!--contact-info-->
-          <div class="m-7 flex flex-col items-center justify-center text-white ">
-            <ul class="flex flex-row">
-              <li>
-                <i class="fa fa-map-marker text-sm p-1 bg-[#ff3300] rounded-full"></i>
-              </li>
-              <li class="ml-3">
-                Address: PO Box 6848. Kampala Plot 5, George Street Georgian House, Kampala.
-              </li>
-            </ul>
-
-            <ul class="flex flex-row">
-              <li>
-                <i class="fa fa-phone p-1 text-sm bg-[#ff3300] rounded-full"></i>
-              </li>
-              <li class="ml-3">
-                Tel: +00 1234 56789
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <i class="fa fa-envelope"></i>
-              </li>
-              <li>
-                Email: FitZone@gmail.com
-              </li>
-            </ul>
+          <div class="m-7 flex flex-col items-center justify-center text-white">
+            <form id="contactForm" onsubmit="submitForm(event)">
+              <div class="mb-4">
+                  <label for="name"
+                         class="block text-sm font-medium text-white">
+                        Name
+                    </label>
+                  <input type="text" id="name" name="name"
+                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"                         placeholder="Enter your name" required>
+              </div>
+              <div class="mb-4">
+                  <label for="email"
+                         class="block text-sm font-medium text-white">
+                        Email
+                    </label>
+                  <input type="email" id="email" name="email"
+                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                         placeholder="Enter your email" required>
+              </div>
+              <div class="mb-4">
+                  <label for="phone"
+                         class="block text-sm font-medium 
+                                text-white">
+                        Phone
+                    </label>
+                  <input type="tel" id="phone" name="phone"
+                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                         placeholder="Enter your phone number" required>
+              </div>
+              <div class="mb-4">
+                  <label for="subject"
+                         class="block text-sm font-medium text-white">
+                        Subject
+                    </label>
+                  <input type="text" id="subject" name="subject"
+                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                          placeholder="Enter the subject" required>
+              </div>
+              <div class="mb-4">
+                  <label for="message"
+                         class="block text-sm font-medium 
+                                text-white">
+                        Message
+                    </label>
+                  <textarea id="message" name="message"
+                            class="form-textarea mt-1 block w-full text-white bg-gray-500 p-2 rounded" rows="6"
+                            placeholder="Enter your message" required>
+                    </textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                  <button type="submit"
+                          class="px-4 py-2 text-white bg-[#ff3300] rounded-lg hover:bg-[#ff471a]">
+                        Submit
+                    </button>
+                  <button type="button" onclick="resetForm()"
+                      class="px-4 py-2 bg-blue-500 text-white 
+                      rounded-lg hover:bg-blue-600">
+                        Reset
+                    </button>
+              </div>
+          </form>
+          <p id="submitMessage"
+           class="text-white font-semibold mt-2 hidden">
+              Form submitted successfully!
+          </p>
           </div>
-
         </section>
+
+        <footer class="m-3 text-center flex flex-row items-center">
+          <div class="text-white text-xl font-bold">
+            Made by <a href="https://yashreddy1963.github.io/" class="text-[#ff3300] cursor-pointer">Yash</a>
+          </div>
+          <a href="https://github.com/YashReddy1963" class="fa fa-github absolute right-5 text-[#ff3300] text-3xl"></a>
+        </footer>
 
 </body>
 </html>
