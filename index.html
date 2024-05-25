@@ -17,7 +17,7 @@
         }
     </style>
 </head>
-<body class="m-0 p-0 bg-[#111111]">
+<body class="m-0 p-0 bg-[#111111]" onload="resetToDefault()">
     
     <!--Navigation bar for mobile resolution-->
         <nav class="bg-[#111111]">
@@ -213,7 +213,7 @@
                 Darren Smith
               </div>
             </div>
-            <div class="slides hidden flex flex-col p-7 gap-y-5 text-center">
+            <div class="slides hidden flex-col p-7 gap-y-5 text-center">
               <i class="fa fa-quote-left text-4xl text-gray-500"></i>
               <div class="text-white font-sans">
                 " Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum, modi sunt autem rerum repellat quos quasi sed tempora recusandae deserunt molestiae. Iusto, quibusdam impedit sint optio incidunt tenetur ab? "
@@ -222,7 +222,8 @@
                 Aleah Hood
               </div>
             </div>
-            <div class="slides hidden flex flex-col p-7 gap-y-5 text-center">
+            <div class="slides hidden
+             flex-col p-7 gap-y-5 text-center">
               <i class="fa fa-quote-left text-4xl text-gray-500"></i>
               <div class="text-white font-sans">
                 " Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit perspiciatis, eveniet possimus officia ea labore nemo, magnam vitae dolores, laborum recusandae quisquam aliquam rerum voluptas repudiandae neque facilis id error. "
@@ -231,10 +232,47 @@
                 Harley Bean
               </div>
             </div>
+
             <!--Previous and Next button-->
           <a class="prev absolute top-36 cursor-pointer text-white hover:bg-[#ff3300] p-2" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next absolute top-36 right-0 cursor-pointer text-white hover:bg-[#ff3300] p-2" onclick="plusSlides(1)">&#10095;</a>
           </div>
+        </section>
+
+        <!--Training section-->
+        <section id="train" class="h-full">
+          <div class="mt-14 flex flex-row items-center justify-center">
+            <div class="m-9 font-extrabold text-[200%] text-white">
+              Train <span class="text-[#ff3300] shadow-box2 bg-opacity-0">Yourself!</span>
+            </div>
+          </div> 
+          <div class="m-4 flex flex-col justify-center">
+            <div class=" text-white text-2xl font-sans">Select the body part</div>
+
+            <form class="mt-2 ">
+              <select id="body_parts" class="bg-[#1f1f1f] border  text-white text-sm rounded-lg focus:ring-[#ff3300] focus:border-[#ff3300] block w-full p-2.5" onchange="fitness(this)">
+                <option selected class="font-extrabold">Choose a body part to train</option>
+                <option value="abdominals">Abdominals</option>
+                <option value="abductors">Abductors</option>
+                <option value="adductors">Adductors</option>
+                <option value="biceps">Biceps</option>
+                <option value="calves">Calves</option>
+                <option value="chest">Chest</option>
+                <option value="forearms">Forearms</option>
+                <option value="glutes">Glutes</option>
+                <option value="hamstrings">Hamstrings</option>
+                <option value="lats">Lats</option>
+                <option value="lower_back">Lower Back</option>
+                <option value="middle_back">Middle Back</option>
+                <option value="quadriceps">Guadriceps</option>
+                <option value="traps">Traps</option>
+                <option value="triceps">Triceps</option>
+              </select>
+            </form>
+
+            <!--Exercise suggestions-->
+            <div id="suggestions" class="m-5 text-white"></div>
+        </div>
         </section>
 
         <!--Contact Us-->
@@ -251,7 +289,7 @@
                         Name
                     </label>
                   <input type="text" id="name" name="name"
-                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"                         placeholder="Enter your name" required>
+                         class="form-input mt-1 block w-full text-black bg-gray-200 p-2 rounded"                         placeholder="Enter your name" required>
               </div>
               <div class="mb-4">
                   <label for="email"
@@ -259,7 +297,7 @@
                         Email
                     </label>
                   <input type="email" id="email" name="email"
-                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                         class="form-input mt-1 block w-full text-black bg-gray-200 p-2 rounded"
                          placeholder="Enter your email" required>
               </div>
               <div class="mb-4">
@@ -269,7 +307,7 @@
                         Phone
                     </label>
                   <input type="tel" id="phone" name="phone"
-                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                         class="form-input mt-1 block w-full text-black bg-gray-200 p-2 rounded"
                          placeholder="Enter your phone number" required>
               </div>
               <div class="mb-4">
@@ -278,7 +316,7 @@
                         Subject
                     </label>
                   <input type="text" id="subject" name="subject"
-                         class="form-input mt-1 block w-full text-white bg-gray-500 p-2 rounded"
+                         class="form-input mt-1 block w-full text-black bg-gray-200 p-2 rounded"
                           placeholder="Enter the subject" required>
               </div>
               <div class="mb-4">
@@ -288,7 +326,7 @@
                         Message
                     </label>
                   <textarea id="message" name="message"
-                            class="form-textarea mt-1 block w-full text-white bg-gray-500 p-2 rounded" rows="6"
+                            class="form-textarea mt-1 block w-full text-black bg-gray-200 p-2 rounded" rows="3"
                             placeholder="Enter your message" required>
                     </textarea>
               </div>
@@ -311,6 +349,7 @@
           </div>
         </section>
 
+        <!--Page footer-->
         <footer class="m-3 text-center flex flex-row items-center">
           <div class="text-white text-xl font-bold">
             Made by <a href="https://yashreddy1963.github.io/" class="text-[#ff3300] cursor-pointer">Yash</a>
