@@ -1,4 +1,4 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+import { Home, Profile, SignIn, SignUp} from "@/pages";
 import { element } from "prop-types";
 
 export const routes = [
@@ -25,13 +25,11 @@ export const routes = [
   {
     name: "Blogs",
     href: "/blogs",
-    target: "_blank",
     element: "",
   },
   {
     name: "Communities",
     href: "/community",
-    target: "_blank",
     element: "",
   }
 ];

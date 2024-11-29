@@ -19,7 +19,7 @@ export function SignUp() {
           <Typography variant="h2" className="font-bold mb-4">Join Us Today</Typography>
           <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your email and password to register.</Typography>
         </div>
-        <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2" onSubmit={handleSubmit}>
+        <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Username
@@ -28,8 +28,6 @@ export function SignUp() {
               type="text"
               size="lg"
               placeholder="Enter your name"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -43,8 +41,6 @@ export function SignUp() {
               type="password"
               size="lg"
               placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -56,19 +52,18 @@ export function SignUp() {
             </Typography>
             <Input
               size="lg"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
-              
             />
           </div>
-          <Button type="submit" className="mt-6" fullWidth>
-            Register Now
-          </Button>
+          <Link to="/bodyInfo">
+            <Button type="submit" className="mt-6" fullWidth>
+              Register Now
+            </Button>
+          </Link>
 
           <div className="space-y-4 mt-8">
             <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>

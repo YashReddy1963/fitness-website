@@ -13,6 +13,7 @@ import {
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -92,7 +93,9 @@ export function Home() {
                   Our FitZone experts can help you discover new training techniques and exercises that offer a dynamic and efficient full-body workout.                  </Typography>
 
                   {/*Directs to video tutorials */}
+                  <Link to="/tutorial" variant="filled">
                   <Button variant="filled">Tutorials</Button>
+                  </Link>
                 </CardBody>
               </Card>
             </div>
