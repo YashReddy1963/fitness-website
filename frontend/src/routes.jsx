@@ -8,11 +8,6 @@ export const routes = [
     element: <Home />,
   },
   {
-    name: "profile",
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
     name: "Sign In",
     path: "/sign-in",
     element: <SignIn />,
@@ -22,16 +17,6 @@ export const routes = [
     path: "/sign-up",
     element: <SignUp />,
   },
-  {
-    name: "Blogs",
-    href: "/blogs",
-    element: "",
-  },
-  {
-    name: "Communities",
-    href: "/community",
-    element: "",
-  }
 ];
 
 export default routes;

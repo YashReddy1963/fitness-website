@@ -109,8 +109,8 @@ Navbar.defaultProps = {
   brandName: "FitZone",
   action: (
     <a
-      href="/"
-      target="_blank"
+      href="/sign-in"
+      target=""
     >
       <Button variant="gradient" size="sm" fullWidth>
         Challenges
